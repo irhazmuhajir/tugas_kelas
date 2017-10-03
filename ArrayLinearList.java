@@ -1,12 +1,12 @@
 package tugas_kelas;
 
-public class ArrayLinearList {
+public class LinearList {
     protected Object [] element,element2;
     protected int size;
     protected int capacity;
     
     int index;
-    public ArrayLinearList(int capacity) {
+    public LinearList(int capacity) {
         this.capacity = capacity;
         element = new Object[capacity];
 
@@ -39,5 +39,8 @@ public class ArrayLinearList {
 
     public Object setSize(int newArray) {
         return null;
+    }
+    public void removeRange(int fromIndex, int toIndex) {
+    	
     }
 }
