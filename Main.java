@@ -3,28 +3,43 @@ package tugas_kelas;
 public class Main {
 	
     public static void main(String [] args){
-        ArrayLinearList x = new ArrayLinearList1();
-        x.add(0,"a");
-        x.add(1,"w");
-        x.add(2,"e");
-        x.add(3,"g");
-        x.add(4,"d");
-        for (int i = 0; i < x.size(); i++) {
-            System.out.println(x.element[i]);
+    	Object [] y = new Object[10];
+    	
+        LinearList method = new ArrayLinearList();
+        method.add(0,"i");
+        method.add(1,"r");
+        method.add(2,"h");
+        method.add(3,"a");
+        method.add(4,"z");
+        for (int i = 0; i < method.size(); i++) {
+            System.out.print(method.element[i]+" ");
         }
         
-        System.out.println("Panjang Array : "+x.size());
-        System.out.println("Panjang elemen sebelum di trim : "+x.capacity);
-        x.trimToSize();
-        System.out.println("Panjang elemen setelah di trim : "+x.capacity);
-        x.setSize(6);
-        System.out.println("Ukuran elemen di set menjadi: " +x.element2.length);
-        x.remove(1);
+        System.out.println();
+        System.out.println("Length Array : "+method.size());
+        System.out.println("Length array before trim : "+method.capacity);
+        method.trimToSize();
+        System.out.println("Length array after trim : "+method.capacity);
+        method.setSize(6);
+        System.out.println("Ukuran elemen di set menjadi: " +method.element2.length);
+        method.remove(1);
         System.out.println("Tampilan setelah indek 1 dihapus");
         
-        for (int i = 0; i < x.size(); i++) {
-            System.out.println(x.element[i]);
+        for (int i = 0; i < method.size(); i++) {
+            System.out.print(method.element[i]+" ");
         }
+        
+        System.out.println();
+        method.removeRange(0, 3);
+        for (int i = 0; i < method.size; i++) {
+			System.out.print("Setelah di remove range : "+method.element[i]+" ");
+		}
+        
+        System.out.println();
+        method.clone(y);
+        for (int i = 0; i < method.size; i++) {
+			System.out.print("Setelah di clone ke Y : "+method.element[i]+" ");
+	}
     }
-   }
+}
 
