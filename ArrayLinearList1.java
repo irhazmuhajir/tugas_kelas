@@ -54,6 +54,23 @@ public class ArrayLinearList1 extends ArrayLinearList{
         }
         return size;
     }
+    @Override
+    public void removeRange(int fromIndex, int toIndex) {
+    	
+    	int numMoved = size - toIndex;
+    	System.arraycopy(element, toIndex, element, fromIndex, numMoved);
+    	int newSize = size - (toIndex-fromIndex);
+    	while (size != newSize) 
+			element[--size] = null;
+			
+    }
+    
+    @Override
+    public Object clone(Object[] y) {
+    	y = new Object[size];
+    	y = element.clone();
+		return toString();
+	}
 }
 
 
