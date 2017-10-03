@@ -1,12 +1,12 @@
 package tugas_kelas;
 
-public class LinearList {
+public class ArrayLinearList {
     protected Object [] element,element2;
     protected int size;
     protected int capacity;
     
     int index;
-    public LinearList(int capacity) {
+    public ArrayLinearList(int capacity) {
         this.capacity = capacity;
         element = new Object[capacity];
 
