@@ -1,45 +1,26 @@
-package tugas_kelas;
+package CircularLinkedList;
 
 public class Main {
-	
-    public static void main(String [] args){
-    	Object [] y = new Object[10];
-    	
-        LinearList method = new ArrayLinearList();
-        method.add(0,"i");
-        method.add(1,"r");
-        method.add(2,"h");
-        method.add(3,"a");
-        method.add(4,"z");
-        for (int i = 0; i < method.size(); i++) {
-            System.out.print(method.element[i]+" ");
-        }
+    public static void main(String[] args) {
         
-        System.out.println();
-        System.out.println("Length Array : "+method.size());
-        System.out.println("Length array before trim : "+method.capacity);
-        method.trimToSize();
-        System.out.println("Length array after trim : "+method.capacity);
-        method.setSize(6);
-        System.out.println("Ukuran elemen di set menjadi: " +method.element2.length);
-        method.remove(1);
-        System.out.println("Tampilan setelah indek 1 dihapus");
+    
+     ChainCircular c = new ChainCircular();
+        System.out.println("Apakah kosong?\t\t\t\t"+c.isEmpty());
+        c.add(0, 0);
+        c.add(1, 1);
+        c.add(2, 2);
+        c.add(3, 3);
+        c.add(4, 4);
+        c.add(5, 6);
+        c.add(0, 1);
+        System.out.println("Index dari elemen 1 = \t\t\t"+c.indexOf(1));
+        System.out.println("isi elemen =\t\t"+c.toString());
+        System.out.println("Element di index 6 =\t\t\t"+c.get(6));
         
-        for (int i = 0; i < method.size(); i++) {
-            System.out.print(method.element[i]+" ");
-        }
-        
-        System.out.println();
-        method.removeRange(0, 3);
-        for (int i = 0; i < method.size; i++) {
-			System.out.print("Setelah di remove range : "+method.element[i]+" ");
-		}
-        
-        System.out.println();
-        method.clone(y);
-        for (int i = 0; i < method.size; i++) {
-			System.out.print("Setelah di clone ke Y : "+method.element[i]+" ");
-	}
+        c.remove(1);
+        System.out.println("isi elemen setelah index 1 d hapus = \t"+c.toString());
+        c.clear();
+        System.out.println("isi elemen setelah di clear =\t\t"+c.toString());
     }
-}
 
+}
